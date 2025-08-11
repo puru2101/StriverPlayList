@@ -1,4 +1,4 @@
-package com.Array.hard;
+package com.Array.hard.mergeSort;
 
 import java.util.ArrayList;
 import java.util.List;
