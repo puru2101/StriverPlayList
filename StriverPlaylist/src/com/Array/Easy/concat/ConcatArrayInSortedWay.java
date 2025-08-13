@@ -1,0 +1,47 @@
+package com.Array.Easy.concat;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConcatArrayInSortedWay {
+
+	public static List<Integer> concatArrayInSortedWay(int[] arr1, int[] arr2) {
+		List<Integer> ls = new ArrayList<>();
+		int n1 = arr1.length - 1;
+		int n2 = arr2.length - 1;
+
+		int first1 = 0;
+		int first2 = 0;
+
+		while (first1 <= n1 && first2 <= n2) {
+			if (arr1[first1] <= arr2[first2]) {
+				ls.add(arr1[first1]);
+				first1++;
+			} else {
+				ls.add(arr2[first2]);
+				first2++;
+			}
+
+		}
+		while (first1 <= n1) {
+			ls.add(arr1[first1]);
+			first1++;
+		}
+
+		while (first2 <= n2) {
+			ls.add(arr2[first2]);
+			first2++;
+		}
+		return ls;
+	}
+
+
+	public static void main(String[] args) {
+		int arr1[] = { 1, 5, 8, 7 };
+		int arr2[] = { 2, 4, 8, 7 };
+		
+		concatArrayInSortedWay(arr1, arr2).stream().forEach(e -> System.out.print(e + " ,"));
+	}
+	
+
+}
