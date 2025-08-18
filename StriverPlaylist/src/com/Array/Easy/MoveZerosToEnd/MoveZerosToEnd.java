@@ -5,24 +5,25 @@ public class MoveZerosToEnd {
 	static void moveZerosToEnd(int arr[]) {
 		int start = 0;
 		int end = arr.length - 1;
-		while (start < end) {
-			if (arr[start] == 0&& arr[end]!=0) {
+		int mid=0;
+		while (mid <= end) {
+			if (arr[mid] != 0 ) {
 				int temp = arr[start];
-				arr[end] = arr[start];
-				arr[start] = temp;
+				arr[start] = arr[mid];
+				arr[mid] = temp;
+				mid++;
 				start++;
-				end--;
-			}else
-				start++;
+			} else
+				mid++;
 
-			for (int a : arr) {
-				System.out.println(a);
-			}
+		}
+		for (int a : arr) {
+			System.out.println(a);
 		}
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 0, 1, 1, 1, 0, 1, 2, 0, 0, 0 };
+		int[] arr = { 0, 1, 1, 1, 0, 1, 2, 0, 0, 0,0,0,0,0,0,0,0 };
 		moveZerosToEnd(arr);
 
 	}
