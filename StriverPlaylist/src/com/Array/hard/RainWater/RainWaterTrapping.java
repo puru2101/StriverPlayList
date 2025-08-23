@@ -1,0 +1,39 @@
+package com.Array.hard.RainWater;
+
+public class RainWaterTrapping {
+
+	public static int trapWater(int arr[]) {
+		int n = arr.length;
+		int sumWater = 0;
+
+		int prefix[] = new int[n];
+
+		int suffix[] = new int[n];
+
+		prefix[0] = arr[0];
+		for (int i = 1; i < n; i++) {
+			prefix[i] = Math.max(prefix[i - 1], arr[i]);
+		}
+		// 1,1,5,5,5,6
+
+		suffix[n - 1] = arr[n - 1];
+		for (int i = n - 2; i >= 0; i--) {
+			suffix[i] = Math.max(suffix[i + 1], arr[i]);
+		}
+
+		// 6,6,6,6,6,6
+		for (int i = 1; i < n; i++) {
+			sumWater += (Math.min(prefix[i], suffix[i]))- arr[i];
+		}
+
+		return sumWater;
+
+	}
+
+	public static void main(String[] args) {
+
+		int arr[] = { 1, 0, 5, 2, 1, 6 };
+		System.out.println(trapWater(arr));
+	}
+
+}
