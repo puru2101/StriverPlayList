@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class RemoveDuplicates {
 
-	static int removeDuplicates(int[] arr) {
+	public static int removeDuplicates(int[] arr) {
 		int i = 0;
 
 		for (int j = 1; j < arr.length; j++) {
@@ -17,20 +17,13 @@ public class RemoveDuplicates {
 		}
 		return i + 1;
 	}
+
 	public static void main(String[] args) {
 		int arr[] = { 1, 2, 3, 4, 4, 4, 5 };
-		
-		Set<Integer> st= new HashSet<>();
-		
-		for(int i=0;i<arr.length;i++) {
+		Set<Integer> st = new HashSet<>();
+		for (int i = 0; i < arr.length; i++) {
 			st.add(arr[i]);
 		}
-		
-		st.stream().collect(Collectors.toList()).forEach(e->System.out.print(e+","));
-		//int k = removeDuplicates(arr);
-
-//		for (int i = 0; i < k; i++) {
-//			System.out.print(arr[i] + " ");
-//		}
+		st.stream().collect(Collectors.toList()).forEach(e -> System.out.print(e + ","));
 	}
 }
