@@ -11,6 +11,23 @@ public class LevelTraversal {
 // /\  /\ 
 //1 12 8 3
 	public static void levelOrderTraversal(TreeNode node) {
+//		if (node == null) {
+//			return;
+//		}
+//		Queue<TreeNode> q = new LinkedList<>();
+//		q.add(node);
+//
+//		while (!q.isEmpty()) {
+//			TreeNode curr = q.poll();
+//			System.out.print(curr.data + ",");
+//			if (curr.left != null) {
+//				q.add(curr.left);
+//			}
+//			if (curr.right != null) {
+//				q.add(curr.right);
+//			}
+//		}
+
 		if (node == null) {
 			return;
 		}
@@ -19,7 +36,8 @@ public class LevelTraversal {
 
 		while (!q.isEmpty()) {
 			TreeNode curr = q.poll();
-			System.out.print(curr.data + ",");
+			System.out.println(curr.data);
+
 			if (curr.left != null) {
 				q.add(curr.left);
 			}
