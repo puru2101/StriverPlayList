@@ -27,7 +27,8 @@ public class TreeNode {
 //	     4  6
 //	    /\  /\ 
 //	   1 12 8 3
-		
+		TreeTOLinkedList.TreeToLL(head);
+		TreeTOLinkedList.printLL(head);
 	}
 
 }
