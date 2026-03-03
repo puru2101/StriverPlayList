@@ -22,7 +22,16 @@ public class RotateArrayByKOptimize {
 		}
 
 	}
-
+	
+//	LEFT
+//	123456789
+//	567891234
+//	
+//	
+//	
+//	RIGHT
+//	123456789
+//67891234
 	public static void main(String[] args) {
 		int arr[] = { 1, 2, 3, 4, 5, 6 };
 		rightRotateByK(arr, 2);

@@ -11,7 +11,23 @@ public class LeftArrayByKOptimize {
 			System.out.print(number + ",");
 		}
 	}
-
+//	1234 56789
+//    98765 4321
+//	56789 1234
+//	
+//	
+//	98765 4321
+//	
+//    56789 1234
+//    123456789
+//    
+//    123456789
+//    123498765
+//    987651234
+//    567891234
+//    432198765
+    
+    
 	static void rotate(int arr[], int start, int end) {
 		while (start <= end) {
 			int temp = arr[start];
