@@ -14,7 +14,7 @@ public class printLeavesWithZeroNodes {
 		while (!q.isEmpty()) {
 			TreeNode curr = q.poll();
 			if (curr.left == null && curr.right == null) {
-				System.out.print(curr.data+",");
+				System.out.print(curr.data + ",");
 			}
 			if (curr.left != null) {
 				q.add(curr.left);
@@ -23,6 +23,33 @@ public class printLeavesWithZeroNodes {
 				q.add(curr.right);
 			}
 		}
+	}
+
+	public static void printLeaf(TreeNode treeNode) {
+		
+		if(treeNode==null) {
+			return;
+		}
+		Queue<TreeNode> ll = new LinkedList<>();
+
+		ll.add(treeNode);
+
+		while (!ll.isEmpty()) {
+			TreeNode node = ll.poll();
+
+			if (node.left == null && node.right == null) {
+				System.out.println(node.data+", ");
+
+			}
+			if (node.left != null) {
+				ll.add(node.left);
+			}
+
+			if (node.right != null) {
+				ll.add(node.right);
+			}
+		}
+
 	}
 
 }

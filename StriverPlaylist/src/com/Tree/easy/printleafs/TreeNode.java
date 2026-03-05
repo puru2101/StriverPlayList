@@ -21,18 +21,19 @@ public class TreeNode {
 		head.left.right = new TreeNode(12);
 		head.right.left = new TreeNode(8);
 		head.right.right = new TreeNode(3);
-		head.right.right.left = new TreeNode(2);
+		//head.right.right.left = new TreeNode(2);
 //	       5
 //	      /\
 //	     4  6
 //	    /\  /\ 
 //	   1 12 8 3
-		System.out.println("Node with non zero child :");
-		PrintLeaves.printNodeWithoutZeroLeaves(head);
-		System.out.println();
-		System.out.println("Node with  zero child :");
+//		System.out.println("Node with non zero child :");
+//		PrintLeaves.printNodeWithoutZeroLeaves(head);
+//		System.out.println();
+//		System.out.println("Node with  zero child :");
 
-		printLeavesWithZeroNodes.printLeavesWithZeroNode(head);
+		//printLeavesWithZeroNodes.printLeavesWithZeroNode(head);
+		printLeavesWithZeroNodes.printLeaf(head);
 	}
 
 }

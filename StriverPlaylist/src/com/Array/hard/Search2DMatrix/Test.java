@@ -15,10 +15,8 @@ public class Test {
 	}
 
 	public static boolean searchIn2dMatrixSorted(int arr[][], int target) {
-
 		int row = arr.length;
 		int column = arr[0].length;
-
 		int i = 0;
 		int j = column - 1;
 		while (i < row && j >= 0) {
@@ -38,7 +36,9 @@ public class Test {
 
 		int target = 5;
 		System.out.println(searchIn2DMatrixBrute(matrix, target));
+		
 		System.out.println("-----------------------------------");
+		
 		System.out.println(searchIn2dMatrixSorted(matrix, target));
 	}
 

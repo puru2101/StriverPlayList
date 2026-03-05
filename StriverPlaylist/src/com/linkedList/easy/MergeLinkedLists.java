@@ -27,14 +27,14 @@ public class MergeLinkedLists {
 
 		return temp.next;
 	}
-	
+
 	public static void printNode(Node n1) {
-		Node curr=n1;
-		while(curr!=null) {
-			System.out.print(curr.data+"->");
-			curr=curr.next;
+		Node curr = n1;
+		while (curr != null) {
+			System.out.print(curr.data + "->");
+			curr = curr.next;
 		}
-		if(curr==null) {
+		if (curr == null) {
 			System.out.print(" null");
 		}
 	}
@@ -47,13 +47,10 @@ public class MergeLinkedLists {
 		Node n2 = new Node(2);
 		n2.next = new Node(4);
 		n2.next.next = new Node(6);
-		
-		
-		
-	Node node=	mergeList(n1, n2);
-	printNode(node);
-	
-	
+
+		Node node = mergeList(n1, n2);
+		printNode(node);
+
 	}
 
 }

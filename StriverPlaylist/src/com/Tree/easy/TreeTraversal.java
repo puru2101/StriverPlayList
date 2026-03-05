@@ -31,6 +31,7 @@ public class TreeTraversal {
 		postOrder(head.left);
 		postOrder(head.right);
 		System.out.print(head.data+",");
+		
 	}
 	
 
