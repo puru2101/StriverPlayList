@@ -1,7 +1,5 @@
 package com.Tree.easy.identicalTrees;
 
-import com.Tree.easy.identicalTrees.*;
-
 public class IdenticalTrees {
 
 	public static boolean identicalTrees(TreeNode root1, TreeNode root2) {
